@@ -1,9 +1,5 @@
-//
-//  AppDelegate.swift
-//  Navigation
-//
 import UIKit
-
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,8 +10,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Добавляем переменную для хранения конфигурации
     var appConfiguration: AppConfiguration?
 
+    // Метод, который вызывается при запуске приложения
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
+        // Инициализация Firebase
+        FirebaseApp.configure()
 
         // Инициализация окна
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -30,9 +30,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Печать выбранной конфигурации и отправка запроса
         if let config = appConfiguration {
             print("Selected configuration: \(config)")
-            NetworkService.request(url: config.url)
+            NetworkService.requestPlanet(from: config.url) { planet in
+                // Обработка ответа
+            }
         }
 
+        // Возвращаем true, чтобы указать, что приложение успешно запустилось
         return true
     }
 }

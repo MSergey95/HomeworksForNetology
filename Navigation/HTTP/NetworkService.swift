@@ -4,124 +4,117 @@
 //
 //  Created by Сергей Минеев on 8/27/24.
 //
-
 import Foundation
 
 struct NetworkService {
-    
-    
-    static func request(url: URL) {
+
+    // Обобщённый метод для запросов с Decodable
+    static func fetchData<T: Decodable>(from url: URL, as type: T.Type, completion: @escaping (Result<T, Error>) -> Void) {
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
-                print("Error: \(error.localizedDescription)")
+                completion(.failure(error))
                 return
             }
-            
-            if let response = response as? HTTPURLResponse {
-                print("Response status code: \(response.statusCode)")
-                print("Headers: \(response.allHeaderFields)")
+
+            guard let data = data else {
+                let error = NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "No data received"])
+                completion(.failure(error))
+                return
             }
-            
-            if let data = data {
-                let responseString = String(data: data, encoding: .utf8)
-                print("Response data: \(String(describing: responseString))")
+
+            do {
+                let decodedData = try JSONDecoder().decode(T.self, from: data)
+                completion(.success(decodedData))
+            } catch {
+                completion(.failure(error))
             }
         }
         task.resume()
     }
-    
-    
-    static func urlSessionAsync(stringURL: String) async {
-        do {
-            guard let url = URL(string: stringURL) else { return }
-            let (data, response) = try await URLSession.shared.data(from: url)
-            
-            if let httpResponse = response as? HTTPURLResponse {
-                print("RESPONSE STATUS: \(httpResponse.statusCode)")
-                print("RESPONSE DATA: \(String(decoding: data, as: UTF8.self))")
-                print("RESPONSE HEADER: \(httpResponse.allHeaderFields)")
-            }
-        } catch {
-            print(error.localizedDescription)
-        }
+
+    // Асинхронный метод с использованием async/await
+    static func fetchDataAsync<T: Decodable>(from url: URL, as type: T.Type) async throws -> T {
+        let (data, _) = try await URLSession.shared.data(from: url)
+
+        let decodedData = try JSONDecoder().decode(T.self, from: data)
+        return decodedData
     }
+
+    // Пример использования JSONSerialization
+    static func requestTodoJSONSerialization(from url: URL, completion: @escaping (Todo?) -> Void) {
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+                completion(nil)
+                return
+            }
+
+            guard let data = data else {
+                print("No data received")
+                completion(nil)
+                return
+            }
+
+            do {
+                // Инициализация объекта с помощью JSONSerialization
+                if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+                   let userId = json["userId"] as? Int,
+                   let id = json["id"] as? Int,
+                   let title = json["title"] as? String,
+                   let completed = json["completed"] as? Bool {
+                    let todo = Todo(userId: userId, id: id, title: title, completed: completed)
+                    completion(todo)
+                } else {
+                    completion(nil)
+                }
+            } catch {
+                print("Failed to decode JSON: \(error.localizedDescription)")
+                completion(nil)
+            }
+        }
+        task.resume()
+    }
+
+    // Старый метод для запроса Todo с использованием JSONDecoder
     static func requestTodo(from url: URL, completion: @escaping (Todo?) -> Void) {
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                print("Error: \(error.localizedDescription)")
-                completion(nil)
-                return
-            }
-            
-            guard let data = data else {
-                print("No data received")
-                completion(nil)
-                return
-            }
-            
-            do {
-                // Декодируем данные в структуру Todo
-                let todo = try JSONDecoder().decode(Todo.self, from: data)
+        fetchData(from: url, as: Todo.self) { result in
+            switch result {
+            case .success(let todo):
                 completion(todo)
-            } catch {
-                print("Failed to decode JSON: \(error.localizedDescription)")
+            case .failure(let error):
+                print("Failed to fetch todo: \(error.localizedDescription)")
                 completion(nil)
             }
         }
-        task.resume()
     }
-    
-    
+
+    // Метод для загрузки планет
     static func requestPlanet(from url: URL, completion: @escaping (Planet?) -> Void) {
-          let task = URLSession.shared.dataTask(with: url) { data, response, error in
-              if let error = error {
-                  print("Error: \(error.localizedDescription)")
-                  completion(nil)
-                  return
-              }
-
-              guard let data = data else {
-                  print("No data received")
-                  completion(nil)
-                  return
-              }
-
-              do {
-                  // Декодируем данные в структуру Planet
-                  let planet = try JSONDecoder().decode(Planet.self, from: data)
-                  completion(planet)
-              } catch {
-                  print("Failed to decode JSON: \(error.localizedDescription)")
-                  completion(nil)
-              }
-          }
-          task.resume()
-      }
-    static func requestResident(from url: URL, completion: @escaping (Resident?) -> Void) {
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                print("Error: \(error.localizedDescription)")
-                completion(nil)
-                return
-            }
-
-            guard let data = data else {
-                print("No data received")
-                completion(nil)
-                return
-            }
-
-            do {
-                let resident = try JSONDecoder().decode(Resident.self, from: data)
-                completion(resident)
-            } catch {
-                print("Failed to decode JSON: \(error.localizedDescription)")
+        fetchData(from: url, as: Planet.self) { result in
+            switch result {
+            case .success(let planet):
+                completion(planet)
+            case .failure(let error):
+                print("Failed to fetch planet: \(error.localizedDescription)")
                 completion(nil)
             }
         }
-        task.resume()
     }
-  }
+
+    // Метод для загрузки жителей планеты
+    static func requestResident(from url: URL, completion: @escaping (Resident?) -> Void) {
+        fetchData(from: url, as: Resident.self) { result in
+            switch result {
+            case .success(let resident):
+                completion(resident)
+            case .failure(let error):
+                print("Failed to fetch resident: \(error.localizedDescription)")
+                completion(nil)
+            }
+        }
+    }
+}
+
 enum AppConfiguration: String, CaseIterable {
     case people = "https://swapi.dev/api/people"
     case starships = "https://swapi.dev/api/starships"
@@ -131,4 +124,3 @@ enum AppConfiguration: String, CaseIterable {
         URL(string: self.rawValue)!
     }
 }
-
