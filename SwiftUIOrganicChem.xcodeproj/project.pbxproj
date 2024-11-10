@@ -1,0 +1,423 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A54952852CE0ABE2002E5803 /* QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54952842CE0ABE2002E5803 /* QuizQuestion.swift */; };
+		A54952882CE0D3B8002E5803 /* LocalAuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54952872CE0D3B8002E5803 /* LocalAuthorizationService.swift */; };
+		A549528A2CE0D401002E5803 /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54952892CE0D401002E5803 /* AuthorizationView.swift */; };
+		A58CCAD22CDDDD6700D04C68 /* SwiftUIOrganicChemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CCAD12CDDDD6700D04C68 /* SwiftUIOrganicChemApp.swift */; };
+		A58CCAD42CDDDD6700D04C68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CCAD32CDDDD6700D04C68 /* ContentView.swift */; };
+		A58CCAD62CDDDD6900D04C68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58CCAD52CDDDD6900D04C68 /* Assets.xcassets */; };
+		A58CCAD92CDDDD6900D04C68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58CCAD82CDDDD6900D04C68 /* Preview Assets.xcassets */; };
+		A58CCAE02CDDE3CA00D04C68 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CCADF2CDDE3CA00D04C68 /* Post.swift */; };
+		A58CCAE22CDDE41500D04C68 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CCAE12CDDE41500D04C68 /* DataModel.swift */; };
+		A58CCAE42CDDE55900D04C68 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CCAE32CDDE55900D04C68 /* InfoView.swift */; };
+		A58CCAE62CDDE5C300D04C68 /* CompoundRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CCAE52CDDE5C300D04C68 /* CompoundRow.swift */; };
+		A58CCAE82CDDE5D600D04C68 /* CompoundDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CCAE72CDDE5D600D04C68 /* CompoundDetails.swift */; };
+		A58CCAEB2CDDE83D00D04C68 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CCAEA2CDDE83D00D04C68 /* QuizView.swift */; };
+		A58CCAED2CDDE87700D04C68 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CCAEC2CDDE87700D04C68 /* SettingsView.swift */; };
+		A58CCAF02CDDECEF00D04C68 /* PubChemResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CCAEF2CDDECEF00D04C68 /* PubChemResponse.swift */; };
+		A58CCAF22CDDED2500D04C68 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CCAF12CDDED2500D04C68 /* NetworkManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A54952842CE0ABE2002E5803 /* QuizQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestion.swift; sourceTree = "<group>"; };
+		A54952872CE0D3B8002E5803 /* LocalAuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthorizationService.swift; sourceTree = "<group>"; };
+		A54952892CE0D401002E5803 /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
+		A58CCACE2CDDDD6700D04C68 /* SwiftUIOrganicChem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIOrganicChem.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A58CCAD12CDDDD6700D04C68 /* SwiftUIOrganicChemApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIOrganicChemApp.swift; sourceTree = "<group>"; };
+		A58CCAD32CDDDD6700D04C68 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A58CCAD52CDDDD6900D04C68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A58CCAD82CDDDD6900D04C68 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A58CCADF2CDDE3CA00D04C68 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		A58CCAE12CDDE41500D04C68 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		A58CCAE32CDDE55900D04C68 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		A58CCAE52CDDE5C300D04C68 /* CompoundRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundRow.swift; sourceTree = "<group>"; };
+		A58CCAE72CDDE5D600D04C68 /* CompoundDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundDetails.swift; sourceTree = "<group>"; };
+		A58CCAEA2CDDE83D00D04C68 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		A58CCAEC2CDDE87700D04C68 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A58CCAEF2CDDECEF00D04C68 /* PubChemResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PubChemResponse.swift; sourceTree = "<group>"; };
+		A58CCAF12CDDED2500D04C68 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A58CCACB2CDDDD6700D04C68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A54952862CE0D3A9002E5803 /* FaceID */ = {
+			isa = PBXGroup;
+			children = (
+				A54952872CE0D3B8002E5803 /* LocalAuthorizationService.swift */,
+				A54952892CE0D401002E5803 /* AuthorizationView.swift */,
+			);
+			path = FaceID;
+			sourceTree = "<group>";
+		};
+		A58CCAC52CDDDD6700D04C68 = {
+			isa = PBXGroup;
+			children = (
+				A58CCAD02CDDDD6700D04C68 /* SwiftUIOrganicChem */,
+				A58CCACF2CDDDD6700D04C68 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A58CCACF2CDDDD6700D04C68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A58CCACE2CDDDD6700D04C68 /* SwiftUIOrganicChem.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A58CCAD02CDDDD6700D04C68 /* SwiftUIOrganicChem */ = {
+			isa = PBXGroup;
+			children = (
+				A58CCAD12CDDDD6700D04C68 /* SwiftUIOrganicChemApp.swift */,
+				A54952842CE0ABE2002E5803 /* QuizQuestion.swift */,
+				A58CCAE92CDDE81D00D04C68 /* Views  */,
+				A58CCADF2CDDE3CA00D04C68 /* Post.swift */,
+				A58CCAEE2CDDECDF00D04C68 /* API */,
+				A58CCAE52CDDE5C300D04C68 /* CompoundRow.swift */,
+				A58CCAE72CDDE5D600D04C68 /* CompoundDetails.swift */,
+				A58CCAE12CDDE41500D04C68 /* DataModel.swift */,
+				A58CCAD52CDDDD6900D04C68 /* Assets.xcassets */,
+				A58CCAD72CDDDD6900D04C68 /* Preview Content */,
+			);
+			path = SwiftUIOrganicChem;
+			sourceTree = "<group>";
+		};
+		A58CCAD72CDDDD6900D04C68 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A58CCAD82CDDDD6900D04C68 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A58CCAE92CDDE81D00D04C68 /* Views  */ = {
+			isa = PBXGroup;
+			children = (
+				A58CCAD32CDDDD6700D04C68 /* ContentView.swift */,
+				A54952862CE0D3A9002E5803 /* FaceID */,
+				A58CCAE32CDDE55900D04C68 /* InfoView.swift */,
+				A58CCAEA2CDDE83D00D04C68 /* QuizView.swift */,
+				A58CCAEC2CDDE87700D04C68 /* SettingsView.swift */,
+			);
+			path = "Views ";
+			sourceTree = "<group>";
+		};
+		A58CCAEE2CDDECDF00D04C68 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A58CCAEF2CDDECEF00D04C68 /* PubChemResponse.swift */,
+				A58CCAF12CDDED2500D04C68 /* NetworkManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A58CCACD2CDDDD6700D04C68 /* SwiftUIOrganicChem */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A58CCADC2CDDDD6900D04C68 /* Build configuration list for PBXNativeTarget "SwiftUIOrganicChem" */;
+			buildPhases = (
+				A58CCACA2CDDDD6700D04C68 /* Sources */,
+				A58CCACB2CDDDD6700D04C68 /* Frameworks */,
+				A58CCACC2CDDDD6700D04C68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftUIOrganicChem;
+			productName = SwiftUIOrganicChem;
+			productReference = A58CCACE2CDDDD6700D04C68 /* SwiftUIOrganicChem.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A58CCAC62CDDDD6700D04C68 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					A58CCACD2CDDDD6700D04C68 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = A58CCAC92CDDDD6700D04C68 /* Build configuration list for PBXProject "SwiftUIOrganicChem" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A58CCAC52CDDDD6700D04C68;
+			productRefGroup = A58CCACF2CDDDD6700D04C68 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A58CCACD2CDDDD6700D04C68 /* SwiftUIOrganicChem */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A58CCACC2CDDDD6700D04C68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A58CCAD92CDDDD6900D04C68 /* Preview Assets.xcassets in Resources */,
+				A58CCAD62CDDDD6900D04C68 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A58CCACA2CDDDD6700D04C68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A58CCAE02CDDE3CA00D04C68 /* Post.swift in Sources */,
+				A58CCAEB2CDDE83D00D04C68 /* QuizView.swift in Sources */,
+				A58CCAE62CDDE5C300D04C68 /* CompoundRow.swift in Sources */,
+				A58CCAED2CDDE87700D04C68 /* SettingsView.swift in Sources */,
+				A58CCAF22CDDED2500D04C68 /* NetworkManager.swift in Sources */,
+				A58CCAE22CDDE41500D04C68 /* DataModel.swift in Sources */,
+				A54952852CE0ABE2002E5803 /* QuizQuestion.swift in Sources */,
+				A58CCAF02CDDECEF00D04C68 /* PubChemResponse.swift in Sources */,
+				A58CCAD42CDDDD6700D04C68 /* ContentView.swift in Sources */,
+				A58CCAE42CDDE55900D04C68 /* InfoView.swift in Sources */,
+				A54952882CE0D3B8002E5803 /* LocalAuthorizationService.swift in Sources */,
+				A58CCAD22CDDDD6700D04C68 /* SwiftUIOrganicChemApp.swift in Sources */,
+				A549528A2CE0D401002E5803 /* AuthorizationView.swift in Sources */,
+				A58CCAE82CDDE5D600D04C68 /* CompoundDetails.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A58CCADA2CDDDD6900D04C68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A58CCADB2CDDDD6900D04C68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A58CCADD2CDDDD6900D04C68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIOrganicChem/Preview Content\"";
+				DEVELOPMENT_TEAM = 7R9CQ3YRWX;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Face ID используется для входа в приложение.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MSergey95.SwiftUIOrganicChem;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A58CCADE2CDDDD6900D04C68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIOrganicChem/Preview Content\"";
+				DEVELOPMENT_TEAM = 7R9CQ3YRWX;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Face ID используется для входа в приложение.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MSergey95.SwiftUIOrganicChem;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A58CCAC92CDDDD6700D04C68 /* Build configuration list for PBXProject "SwiftUIOrganicChem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A58CCADA2CDDDD6900D04C68 /* Debug */,
+				A58CCADB2CDDDD6900D04C68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A58CCADC2CDDDD6900D04C68 /* Build configuration list for PBXNativeTarget "SwiftUIOrganicChem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A58CCADD2CDDDD6900D04C68 /* Debug */,
+				A58CCADE2CDDDD6900D04C68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A58CCAC62CDDDD6700D04C68 /* Project object */;
+}
